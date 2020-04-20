@@ -1,13 +1,14 @@
+import os
 import numpy as np
 import pandas as pd
 import torch
 from PIL import Image
-import os
-os.chdir("/Users/alexa.filimokhina/Downloads/Архив 2")
-
-NUM_PICTURES = 10
-CSV_DIR = "/Users/alexa.filimokhina/Downloads/Архив 2/data.csv"
 from gym import spaces
+
+PICTURES = 10
+PICTURES_DIR = "/Users/alexa.filimokhina/Downloads/Архив 2"
+CSV_DIR = os.path.join(PICTURES_DIR, "data.csv")
+os.chdir(PICTURES_DIR)
 
 
 class CroudsorsingEnv:
